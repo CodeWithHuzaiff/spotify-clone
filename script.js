@@ -134,7 +134,7 @@ async function displayAlbum() {
 
             // songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
             let folder = item.currentTarget.getAttribute("data-folder");
-            songs = await getSongs(`songs/${folder}`);
+            songs = await getSongs(folder);        
             Array.from(document.querySelector(".song-list").getElementsByTagName("li")).forEach((e) => {
                 e.addEventListener("click", () => {
                     console.log(e.querySelector(".song-info").firstElementChild.innerHTML);
