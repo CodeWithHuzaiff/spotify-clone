@@ -71,25 +71,41 @@ let playMusic = (track, pause = false) => {
 
 //This is a function used to fetch all the album in my local machine.
 
-async function displayAlbum() {
-    let a = await fetch(`https://spotify00.netlify.app/songs/`);
-    let response = await a.text();
-    let div = document.createElement("div");
-        div.innerHTML = response;
-    let anchors = div.getElementsByTagName("a");
-    let songContainer=document.querySelector(".song-container");
-    let array = Array.from(anchors);
+// async function displayAlbum() {
+//     let a = await fetch(`https://spotify00.netlify.app/songs/`);
+//     let response = await a.text();
+//     let div = document.createElement("div");
+//         div.innerHTML = response;
+//     let anchors = div.getElementsByTagName("a");
+//     let songContainer=document.querySelector(".song-container");
+//     let array = Array.from(anchors);
 
-        for (let i = 0; i < array.length; i++) {
-            const e = array[i];
+//         for (let i = 0; i < array.length; i++) {
+//             const e = array[i];
             
-        let href = e.getAttribute("href");
-        if (href !== "../" && href !== "songs/" && !href.includes(".DS_Store")
-          ) {
-            let folder= e.href.split("/").slice(-2)[0];  
+//         let href = e.getAttribute("href");
+//         if (href !== "../" && href !== "songs/" && !href.includes(".DS_Store")
+//           ) {
+//             let folder= e.href.split("/").slice(-2)[0];  
             
-            let a = await fetch(`https://spotify00.netlify.app/songs/${folder}/info.json`);
-            let response = await a.json();
+//             let a = await fetch(`https://spotify00.netlify.app/songs/${folder}/info.json`);
+//             let response = await a.json();
+
+
+async function displayAlbum() {
+
+    let a = await fetch("songs/index.json");
+    let folderList = await a.json();
+
+    let songContainer = document.querySelector(".song-container");
+
+    for (let i = 0; i < folderList.length; i++) {
+        const folder = folderList[i].folder;
+
+        let response = await fetch(`songs/${folder}/info.json`);
+        let info = await response.json();
+
+
             // console.log(response);
             songContainer.innerHTML = songContainer.innerHTML+`                        
                             <div data-folder="${folder}" class="song-card">
@@ -100,8 +116,8 @@ async function displayAlbum() {
                                 </div>
                                 </div>
                                 <div class="about-wrap">
-                                    <h2>${response.title}</h2>
-                                    <p>${response.description}</p>
+                                    <h2>${info.title}</h2>
+                                    <p>${info.description}</p>
                             </div>
                         </div>`
              
@@ -129,8 +145,6 @@ async function displayAlbum() {
             });
         })
     })
-    
-}
 
 
 
