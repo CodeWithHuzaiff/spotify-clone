@@ -21,11 +21,11 @@ async function getSongs(folder) {
     for (let i = 0; i < as.length; i++) {
         const element = as[i];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${currfolder}/`)[1]);
+            songs.push(element.href.split(`/${folder}/`)[1]);
         }
     }
        //show all the songs in the playlist
-   let songUL = document.querySelector(".song-list").getElementsByTagName("ul")[0];
+   let songUL = document.querySelector(".song-list ul");
 
    songUL.innerHTML=""                         //as to initiate new folder
        
@@ -54,7 +54,7 @@ async function getSongs(folder) {
 
 }
 let playMusic = (track, pause = false) => {
-    currSong.src = `/${currfolder}/` + track;
+    currSong.src = `https://spotify00.netlify.app/songs/${currfolder}/` + track;
     if (!pause) {
         currSong.play();
         play.src = "Assets/pause.svg";
