@@ -1,0 +1,194 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+body{
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header nav div{
+    width: 50vw;
+}
+header nav .LS-div{
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.ham{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    display: none;
+}
+.LS-div img {
+    width: 45px;
+}
+.LS-div div img {
+    width: 24px;
+}
+.home-base{
+    width: 48px;
+    height: 48px;
+    background-color: rgb(43, 42, 42);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input {
+    width: 100%;
+    max-width: 450px;
+    height: 46px;
+    border-radius: 27px;
+    border: none;
+    background-color:rgb(43, 42, 42) ;
+    padding: 2px 20px;
+    display: flex;
+    column-gap: 10px;
+    outline: 2px;
+    transition: all 0.3s ease;
+}
+.secondary-src{
+    display: none;
+}
+.secondary-src img{
+    width: 40px;
+}
+.input:hover{
+    background-color:rgb(61, 59, 59) ;
+    scale: 1.005;
+}
+.input:active{
+    border: 2px solid white;
+}
+
+.input input{
+    background-color: transparent;
+    width: 100%;
+    max-width: 450px;
+    height: 40px;
+    border-radius: 27px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+    caret-color:green;
+}
+.input img{
+    width: 24px;
+}
+
+header nav .RS-div{
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+header nav .RS-div .support-info{
+    display: flex;
+    column-gap: 1px;
+    width: 55%;
+    padding-left: 0;
+    justify-content: flex-start;  
+    align-items: center; 
+    color:rgb(181, 176, 176) ;
+    font-weight: bold;
+    font-size: 15px;
+}
+header nav .RS-div .support-info div{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.premium{
+    margin: 0;
+    padding: 0;
+}
+.support{
+    margin: 0;
+    padding: 0;
+}
+.download{
+    margin: 0;
+    padding: 0;
+}
+.line{
+    display: flex;
+    width: 3%;
+    padding-left: 18px;
+    justify-content: center;  
+    align-items: center; 
+}
+.line img{
+    height: 32px;
+    opacity: 0.7;
+}
+.logIn-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-left: 60px;
+}
+.logIn-info div{
+    height: 24px;
+    display: flex;
+    font-size: 15px;
+    color: rgb(181, 176, 176);
+    font-weight: bold;
+}
+.install{
+    width: 120px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btn{
+    width: 120px;
+}
+.sign-up{
+    /* width: 70px; */
+    width: 110px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.logIn-info .btn{
+    display: flex;
+    align-items: center;
+    height: 55px;
+}
+.btn .log-in{
+    border: none;
+    height: 50px;
+    width: 110px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.install img{
+    margin-right:5px ;
+    width: 17px;
+    opacity: 0.7;
+}
+.install p a{
+    color: rgb(181, 176, 176);
+    text-decoration: none;
+}

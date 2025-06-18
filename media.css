@@ -1,0 +1,176 @@
+@media (max-width:1410px){
+    .song-card{
+        width: 185px;
+        margin-left: 0;
+    }
+    .song-card img:first-child{
+        width: 165px;
+    }
+    main .L-sec{
+        width: 90%;
+        position: absolute;
+        left: -100%;
+        transition: all 300ms ease;
+        z-index: 10;
+        top: 0;
+    }
+    main .R-sec{
+        width: 98vw;
+    }
+    .playbar{
+        width: 94vw;
+        
+    }
+    header nav .RS-div .support-info{
+        display: none;
+    }
+    .ham{
+        display: flex;
+    }
+    .btn-playlist .plus{
+        display: none;
+    }
+    .btn-playlist .cross{
+        display: flex;
+    }
+    .line img{
+        display: none;
+    }
+    .logIn-info div{
+        height: 40px;
+        margin: 0;
+        padding: 0;
+    }
+    div.install{
+        display: none;
+    }
+    .install p, .install img,.line img,.home-base{
+        display: none;
+    }
+    .logIn-info{
+        margin:0 ;
+    }
+    .song-container{
+        /* display:contents; */
+        height: 90vh;
+    }
+    .playbar{
+        height: 150px;
+
+    }
+    .play-wrap{
+        /* width: 50px; */
+        /* height: 50px; */
+        opacity: 1;
+        /* left: 0; */
+        /* bottom: 0; */
+    }
+    .song-card div .play{
+        width: 23px;
+    }
+    .seekbar{
+        margin-top: 8px;      
+    }
+    .heading-songs{
+        width: 100%;
+        
+    }
+    .input{
+        position: absolute;
+        top: -100%;
+        
+    }
+    .secondary-src{
+        display: flex;
+        width: 60px;
+    }
+    .LS-div div img{
+        width: 40px;
+    }
+    .logIn-info .sign-up{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logIn-info .btn button{
+        width: 80px;
+        height: 45px;
+    }
+    .heading-songs{
+        height: 60vh;
+    }
+    .playbar{
+        z-index: 0;
+    }
+    .song-card{
+        width: 360px;
+        height: 160px;
+        display: flex;
+        position: relative;
+        right: 0;
+        background-color: #2e2d2d;
+    }
+    .img-wrap{
+        position:static;
+    }
+    .song-card img:first-child{
+        width: 135px;
+    }
+    .about-wrap{
+        padding: 20px 10px;
+    }
+    .song-card h2{
+        font-size: 22px;
+        font-weight: 300px;
+    }
+    .song-card p {
+        font-size: 14px
+    }
+    .abovebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 12px;
+        
+    }
+    .song-time{
+        /* margin-top: 5px; */
+        font-size: 14px;
+        padding-left:10px;
+        margin: 0;
+        overflow: visible;
+        /* border: 1px solid red; */
+        height: 30px;
+    }
+    .song-button #play{
+        width: 16px;
+    }
+    .play-song-info{
+        width: auto;
+        height: auto;
+        font-weight:bolder;
+    }
+    .song-button{
+        display: flex;
+        justify-content: center;
+        height: 25px;
+    }
+    .timeNvol{
+        display: flex;
+        align-items: center;
+        /* border: 1px solid white; */
+        width: 350px;
+        justify-content: space-between;
+        height: 35px;
+        overflow: visible;
+
+
+    }
+    .vol{
+        padding-right: 12px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+    }
+};
+

@@ -1,0 +1,158 @@
+main {
+    display: flex;
+}
+main .L-sec{
+    height:100%;
+    width: 30%;
+    background-color: rgb(27, 26, 26);
+    border-radius: 10px;
+    margin:8px 5px ;
+    padding-bottom: 30px;
+}
+.play-pod{
+    height: 510px;
+    padding-top: 10px;
+}
+.library{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 28px;
+
+}
+.para{
+    font-size: 25px;
+    font-weight: 600;
+}
+.library .btn-playlist img{
+    opacity: 0.7;
+}
+.library .btn-playlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    transition: all 500ms;
+}
+.library .btn-playlist:hover{
+    background-color: rgb(56, 55, 55);
+}
+.btn-playlist .cross{
+    display: none;
+}
+
+.LP{
+    background-color: rgb(53, 53, 53);
+    padding: 20px 30px;
+    margin: 0 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 25px; */
+}
+.LP h2{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+.LP p{
+    font-size: 14px;
+    font-weight: 400;
+    /* margin-bottom: 10px; */
+}
+.LP button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+}
+.song-list{
+    padding:  10px 0;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color:rgb(40, 41, 41);
+    margin-bottom: 0;
+    height: 360px;
+    overflow: auto;
+}
+.song-list ul{
+    padding:20px 10px;
+    padding-bottom: 0;
+
+}
+.song-list ul li{
+    list-style-type:decimal ;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 10px;
+    /* padding-left: 25px; */
+    outline: 2px solid white;
+    border-radius: 8px;
+    width: 100%;
+    column-gap: 20px;
+}
+.song-list ul li .playnow{
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    width: 204px;
+}
+.song-info{
+    width: 350px;
+}
+.song-list ul li .playnow span{
+    width: 84px;
+}
+.song-info .name{
+    color: rgb(204, 202, 202);
+}
+.song-info .au-name{
+    font-weight: bolder;
+    margin-top: 8px;
+}
+
+
+.policies{
+    padding: 10px;
+    margin-right:70px ;
+    margin-left:12px ;
+}
+.policies div{
+    font-size: 11px;
+    display: inline;
+    margin-left: 14px;
+}
+.policies div a{
+    color: rgb(170, 167, 167);
+    text-decoration: none;
+}
+.cookie a{
+    color: rgb(240, 237, 237);
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 36px;
+}
+.language{
+    display: flex;
+    column-gap: 8px;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    height: 32px;
+    border-radius: 20px;
+    border: 1px solid rgb(87, 85, 85);
+    padding-left: 12px;
+    margin-top: 16px;
+    margin-left: 40px;
+}
+.language img{
+    width: 15px;
+}
+

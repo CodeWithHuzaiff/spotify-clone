@@ -1,0 +1,215 @@
+:root{
+    --a:0;         /*we simple set a variable*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+main .R-sec{
+    height:90vh;
+    width: 70vw;
+    border-radius: 10px;
+    margin:8px 5px ;
+    position: relative;
+}
+.songs-playlist .heading-songs>h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    box-shadow:1px 5px 6px rgb(56, 56, 56);
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+.heading-songs{
+    background-color: rgb(27, 26, 26);
+    padding-top: 10px;
+    border-radius: 10px;
+    
+}
+.song-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    overflow-y: auto;
+    height:65vh;
+    box-sizing: border-box;
+
+}
+.song-card{
+    margin-left: 14px;
+    margin-top:20px;
+    width: 210px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #2e2d2d;
+    transition: all 400ms ease;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.song-card:hover{
+    background-color: #262525;
+}
+
+.song-card img:first-child{
+    width: 185px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    transition: all 400ms ease;
+}
+.song-card img:first-child:hover{
+    scale: 1.04;
+}
+.song-card h2{
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-bottom: 13px;
+    transition: all 1s ease;
+}
+.song-card h2:hover,.song-card p:hover{
+    text-decoration: underline;
+}
+.song-card p{
+    font-size: 13px;
+    font-weight: 200;
+    color: rgb(176, 172, 172);
+    margin-left: 10px;
+    width: 150px;
+}
+.song-card div .play{
+    z-index: 10;
+    width: 25px;
+    margin-right: 8px;
+}
+.img-wrap{
+    position: relative;
+}
+.play-wrap{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: rgb(30, 215, 96);
+    position: absolute;
+    bottom: 24px;
+    right: 20px;
+    opacity: var(--a);  /*this is how to define a variable in css*/
+    transition: all 500ms ease-in-out;
+    transform: translateY(10px);
+    overflow: hidden;
+
+}
+.song-card:hover .play-wrap{
+    --a:1;              /*on hovering the value of variable changes*/
+    transform: translateY(0);
+}
+.playbar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+    background-color: rgb(65, 64, 64);
+    width: 65vw;
+    height: 80px;
+    padding: 12px;
+    border-radius: 30px;
+    z-index: 1;
+}
+.song-button{
+    width: 150px;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    
+}
+.song-button img{
+    width: 18px;
+    cursor: pointer;
+}
+.song-button :nth-child(2){
+    width: 16px;
+}
+.seekbar{
+    width: 85%;
+    height: 5px;
+    background-color: #fff;
+    /* position: absolute; */            
+    position: relative;
+    margin: 10px auto;
+    margin-top: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: visible;
+}
+.progress {
+    height: 100%;
+    background-color: #00ff3c;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 10px;
+    transition: left 0.5s linear;
+}
+.seekbar .circle{
+    background-color: #00ff3c;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;                            
+    position: absolute;
+    transform: translateY(-50%);
+    top: 2px;
+    left: 0;
+    transition: left 0.5s linear;
+    z-index: 2;
+}
+.play-song-info{
+    color: white;
+    padding: 0 12px;
+    width: 280px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-weight:bold;
+}
+.song-time{
+    color: white;
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+}
+.timeNvol{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    width: 280px;
+    justify-content: space-around;
+}
+.vol{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 150px;
+    cursor:pointer;
+}
+.range input{
+    width: 100px;
+    cursor:pointer;
+    accent-color: blue;
+}

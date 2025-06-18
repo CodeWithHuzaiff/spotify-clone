@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="left-sec.css" />
+    <link rel="stylesheet" href="right-sec.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="media.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="LS-div">
+                <span class="ham">
+                    <img class="filter" src="Assets/hamburger-menu.svg" alt="" />
+                </span>
+                <img class="filter" src="Assets/logo.svg" alt="logo" />
+                <div class="home-base">
+                    <img class="filter opacity" src="Assets/home.svg" alt="home" />
+                </div>
+                <div class="input">
+                    <img class="filter opacity" src="Assets/search.svg" alt="" />
+                    <input type="text" placeholder="What do you want to play?" />
+                    <img class="filter opacity" src="Assets/browser.svg" alt="" />
+                </div>
+                <div class="filter secondary-src">
+                    <img src="Assets/search.svg" alt="" />
+                </div>
+            </div>
+            <div class="RS-div">
+                <div class="support-info">
+                    <div class="premium">Premium</div>
+                    <div class="support">Support</div>
+                    <div class="dowmload">Download</div>
+                </div>
+
+                <div class="line">
+                    <img class="filter" src="Assets/line.svg" alt="" />
+                </div>
+
+                <div class="logIn-info">
+                    <div class="install">
+                        <img class="filter" src="Assets/download.svg" alt="" />
+                        <p>
+                            <a href="https://www.spotify.com/in-en/download/">Install App</a>
+                        </p>
+                    </div>
+                    <div class="sign-up">Sign Up</div>
+                    <div class="btn">
+                        <button class="log-in">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="L-sec">
+            <div class="library">
+                <div class="para">Your Library</div>
+
+                <div class="btn-playlist">
+                    <img class="filter width plus" src="Assets/plus.svg" alt="" />
+
+                    <img class="width cross" src="Assets/cross.svg" alt="" />
+                </div>
+            </div>
+            <div class="play-pod">
+                <div class="playlist LP">
+                    <div class="playlist-crt">
+                        <h2>Create your first playlist</h2>
+                        <p>It's easy,we'll help you</p>
+                    </div>
+                    <div class="Playlistz-btn">
+                        <button>Create playlist</button>
+                    </div>
+                </div>
+                <div class="song-list">
+                    <ul>
+                        <!-- inserted by javascript -->
+                    </ul>
+                </div>
+            </div>
+            <div class="policies">
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety & Privacy Center</span></a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a>
+                </div>
+            </div>
+            <div class="cookie">
+                <a href="https://www.spotify.com/in-en/Cookies/">Cookies</a>
+            </div>
+            <div class="language">
+                <img class="filter" src="Assets/universe.svg" alt="" />
+                <p>English</p>
+            </div>
+        </section>
+        <section class="R-sec">
+            <div class="songs-playlist">
+                <div class="heading-songs">
+                    <h2>Trending songs</h2>
+
+                    <div class="song-container">
+                        <!-- Albums fetched here -->
+                    </div> 
+                </div>
+
+                <div class="seeking-div">
+                    <div class="playbar">
+                        <div class="seekbar">
+                            <div class="progress"></div>
+                            <div class="circle"></div>
+                        </div>
+
+                        <div class="abovebar">
+                            <div class="play-song-info">
+                                <!-- song name on  playbar -->
+                            </div>
+
+                            <div class="song-button">
+                                <img id="previous" class="filter" src="Assets/previous.svg" alt="" />
+                                <img id="play" class="filter" class="play_song" src="Assets/newplay.svg" alt="" />
+                                <img id="next" class="filter" src="Assets/next.svg" alt="" />
+                            </div>
+
+                            <div class="timeNvol">
+                                <div class="song-time">00:00/00:00</div>
+                                <div class="vol">
+                                    <img width="30px" class="volIcon filter" src="Assets/volume.svg" alt="" />
+                                    <div class="range">
+                                        <input name="volume" type="range" min="0" max="100" value="50" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
