@@ -102,7 +102,7 @@ async function displayAlbum() {
     for (let i = 0; i < folderList.length; i++) {
         const folder = folderList[i].folder;
 
-        let response = await fetch(`songs/${folder}/info.json`);
+        let response = await fetch(`https://spotify00.netlify.app/songs/${folder}/info.json`);
         let info = await response.json();
 
 
@@ -110,7 +110,7 @@ async function displayAlbum() {
             songContainer.innerHTML = songContainer.innerHTML+`                        
                             <div data-folder="${folder}" class="song-card">
                             <div class="img-wrap">
-                                <img src="/songs/${folder}/cover.jpeg" alt="coverImage" />
+                                <img src="https://spotify00.netlify.app/songs/${folder}/cover.jpeg" alt="coverImage" />
                                 <div class="play-wrap">
                                     <img class="play" src="Assets/play.svg" alt="play" />
                                 </div>
@@ -151,7 +151,7 @@ async function displayAlbum() {
 
 async function main() {
     //get list of all the songs
-    await getSongs("songs/ncs"); //here is the folder path where the songs are fetches
+    await getSongs("ncs"); //here is the folder path where the songs are fetches
 
     playMusic(songs[0], true);
 
