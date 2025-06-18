@@ -45,7 +45,7 @@ async function getSongs(folder) {
 
 }
 let playMusic = (track, pause = false) => {
-    currSong.src = `https://spotify00.netlify.app/songs/${currfolder}/` + track;
+    currSong.src = `https://spotify00.netlify.app/songs/${currfolder}/` + encodeURIComponent(track);
     if (!pause) {
         currSong.play();
         play.src = "Assets/pause.svg";
