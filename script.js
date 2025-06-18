@@ -11,7 +11,7 @@ function formatTime(seconds) {
 }
 
 async function getSongs(folder) {
-    let a = await fetch(`https://spotify00.netlify.app/${folder}/`);
+    let a = await fetch(`https://spotify00.netlify.app/songs/${folder}/`);
     currfolder = folder;
     let response = await a.text();
     let div = document.createElement("div");
