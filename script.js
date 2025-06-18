@@ -11,27 +11,18 @@ function formatTime(seconds) {
 }
 
 async function getSongs(folder) {
-    let a = await fetch(`https://spotify00.netlify.app/songs/${folder}/`);
     currfolder = folder;
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-    songs = [];
-    for (let i = 0; i < as.length; i++) {
-        const element = as[i];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${folder}/`)[1]);
-        }
-    }
+    let response = await fetch(`https://spotify00.netlify.app/songs/${folder}/songs.json`);
+    songs = await response.json();
+
        //show all the songs in the playlist
    let songUL = document.querySelector(".song-list ul");
 
    songUL.innerHTML=""                         //as to initiate new folder
        
    for (const song of songs) {
-       songUL.innerHTML =
-           songUL.innerHTML +
+        
+            songUL.innerHTML +=
            `<li>
            <img class="width filter" src="Assets/music.svg" alt="">
            <div class="song-info">
@@ -67,29 +58,6 @@ let playMusic = (track, pause = false) => {
 };
 
 
-
-
-//This is a function used to fetch all the album in my local machine.
-
-// async function displayAlbum() {
-//     let a = await fetch(`https://spotify00.netlify.app/songs/`);
-//     let response = await a.text();
-//     let div = document.createElement("div");
-//         div.innerHTML = response;
-//     let anchors = div.getElementsByTagName("a");
-//     let songContainer=document.querySelector(".song-container");
-//     let array = Array.from(anchors);
-
-//         for (let i = 0; i < array.length; i++) {
-//             const e = array[i];
-            
-//         let href = e.getAttribute("href");
-//         if (href !== "../" && href !== "songs/" && !href.includes(".DS_Store")
-//           ) {
-//             let folder= e.href.split("/").slice(-2)[0];  
-            
-//             let a = await fetch(`https://spotify00.netlify.app/songs/${folder}/info.json`);
-//             let response = await a.json();
 
 
 async function displayAlbum() {
