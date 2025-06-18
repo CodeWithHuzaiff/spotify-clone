@@ -11,7 +11,7 @@ function formatTime(seconds) {
 }
 
 async function getSongs(folder) {
-    let a = await fetch(`http://192.168.1.100:3000/${folder}/`);
+    let a = await fetch(`https://spotify00.netlify.app/${folder}/`);
     currfolder = folder;
     let response = await a.text();
     let div = document.createElement("div");
@@ -72,7 +72,7 @@ let playMusic = (track, pause = false) => {
 //This is a function used to fetch all the album in my local machine.
 
 async function displayAlbum() {
-    let a = await fetch(`http://192.168.1.100:3000/songs/`);
+    let a = await fetch(`https://spotify00.netlify.app/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
         div.innerHTML = response;
@@ -88,7 +88,7 @@ async function displayAlbum() {
           ) {
             let folder= e.href.split("/").slice(-2)[0];  
             
-            let a = await fetch(`http://192.168.1.100:3000/songs/${folder}/info.json`);
+            let a = await fetch(`https://spotify00.netlify.app/songs/${folder}/info.json`);
             let response = await a.json();
             // console.log(response);
             songContainer.innerHTML = songContainer.innerHTML+`                        
